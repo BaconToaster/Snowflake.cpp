@@ -13,6 +13,8 @@
 
 #define TITLE "Snowflake.cpp"
 #define TITLEW TEXT(TITLE)
+
+// you need those for snowflake
 #define WINDOW_WIDTH  1920
 #define WINDOW_HEIGHT 1080
 
@@ -122,9 +124,6 @@ int main()
 
     io.Fonts->AddFontDefault();
 
-    // Setup Dear ImGui style
-    //ImGui::StyleColorsClassic();
-
     // Setup Platform/Renderer backends
     ImGui_ImplWin32_Init(main_hwnd);
     ImGui_ImplDX9_Init(g_pd3dDevice);
@@ -134,7 +133,8 @@ int main()
     RECT rc = { 0 };
     GetWindowRect(main_hwnd, &rc);
 
-    Snowflake::CreateSnowFlakes(snow, SNOW_LIMIT, 5.f, 25.f, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, Snowflake::vec3(0.f, 0.005f), IM_COL32(255, 255, 255, 100));
+    // create the snow flakes
+    Snowflake::CreateSnowFlakes(snow, SNOW_LIMIT, 5.f/*minimum size*/, 25.f/*maximum size*/, 0/*imgui window x position*/, 0/*imgui window y position*/, WINDOW_WIDTH, WINDOW_HEIGHT, Snowflake::vec3(0.f, 0.005f)/*gravity*/, IM_COL32(255, 255, 255, 100)/*color*/);
 
     // Main loop
     MSG msg;
@@ -168,7 +168,10 @@ int main()
                 }
 
                 GetCursorPos(&mouse);
-                Snowflake::Update(snow, Snowflake::vec3(mouse.x, mouse.y), Snowflake::vec3(rc.left, rc.top));
+                // render this before anything else so it is the background
+                Snowflake::Update(snow, Snowflake::vec3(mouse.x, mouse.y)/*mouse x and y*/, Snowflake::vec3(rc.left, rc.top)/*hWnd x and y positions*/); // you can change a few things inside the update function
+
+                // render other stuff
 
             }
             ImGui::End();

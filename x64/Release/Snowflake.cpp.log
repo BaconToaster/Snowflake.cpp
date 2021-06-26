@@ -8,10 +8,10 @@
   main.cpp
 C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(166,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(166,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,103): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
-C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,94): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
-C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,71): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
-C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,62): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(172,120): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(172,111): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(172,71): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(172,62): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
   Snowflake.cpp
 C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(42,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(55,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data

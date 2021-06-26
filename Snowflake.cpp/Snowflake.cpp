@@ -52,7 +52,7 @@ Snowflake::Snowflake::Snowflake(float _minSize, float _maxSize, int _windowX, in
     width = _width;
     height = _height;
     color = _color;
-    pos = vec3(RandomFloat(0.f, width), RandomFloat(windowX - 100.f, windowX - 10.f));
+    pos = vec3(RandomFloat(0.f, width), RandomFloat(windowY - 100.f, windowY - 10.f));
     velocity = vec3(0.f, 0.f);
     accelaretion = vec3();
     radius = GetRandomSize(minSize, maxSize);
