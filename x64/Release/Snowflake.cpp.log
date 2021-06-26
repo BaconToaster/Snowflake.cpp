@@ -1,0 +1,24 @@
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx9.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  main.cpp
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(166,85): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(166,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,103): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,94): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,71): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\main.cpp(171,62): warning C4244: 'argument': conversion from 'LONG' to 'float', possible loss of data
+  Snowflake.cpp
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(42,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(55,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(92,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Leo\Desktop\git repos\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp\Snowflake.cpp(120,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1159 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Snowflake.cpp.vcxproj -> C:\Users\Leo\Desktop\git repos\Snowflake.cpp\x64\Release\Snowflake.cpp.exe
