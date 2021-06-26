@@ -2,4 +2,4 @@
  
 ### `Example`
 
-<img src="https://imgur.com/2kySOel" alt="Snowflake.cpp example"/>
+<img src="https://i.imgur.com/2kySOel.gif" alt="Snowflake.cpp example"/>
