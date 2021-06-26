@@ -25,6 +25,9 @@
 *.la
 *.a
 *.lib
+*.iobj
+/x64/*
+
 
 # Executables
 *.exe
