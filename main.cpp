@@ -163,8 +163,9 @@ int main()
 
                 if (ImGui::GetWindowPos().x != 0 || ImGui::GetWindowPos().y != 0)
                 {
-                    MoveWindow(main_hwnd, rc.left + ImGui::GetWindowPos().x, rc.top + ImGui::GetWindowPos().y, WINDOW_WIDTH, WINDOW_HEIGHT, TRUE);
+                    MoveWindow(main_hwnd, rc.left + ImGui::GetWindowPos().x, rc.top + ImGui::GetWindowPos().y, WINDOW_WIDTH, WINDOW_HEIGHT, TRUE); // you dont need those two if you have an imgui window inside an actual window
                     ImGui::SetWindowPos(ImVec2(0.f, 0.f));
+                    // Snowflake::ChangeWindowPos(snow, ImGui::GetWindowPos().x, ImGui::GetWindowPos().y); // you need this if you have an imgui window inside an actual window
                 }
 
                 GetCursorPos(&mouse);
