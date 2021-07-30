@@ -52,7 +52,7 @@ Snowflake::Snowflake::Snowflake(float _minSize, float _maxSize, int _windowX, in
     width = _width;
     height = _height;
     color = _color;
-    pos = vec3(RandomFloat(0.f, width), RandomFloat(windowY - 100.f, windowY - 10.f));
+    pos = vec3(RandomFloat(windowX, windowX + width), RandomFloat(windowY - 100.f, windowY - 10.f));
     velocity = vec3(0.f, 0.f);
     accelaretion = vec3();
     radius = GetRandomSize(minSize, maxSize);
@@ -84,12 +84,12 @@ void Snowflake::Snowflake::Render()
 
 bool Snowflake::Snowflake::OffScreen()
 {
-    return (pos.y > height + radius || pos.x < -radius || pos.x > width + radius);
+    return (pos.y > windowY + height + radius || pos.x < windowX - radius || pos.x > windowX + width + radius);
 }
 
 void Snowflake::Snowflake::Randomize()
 {
-    pos = vec3(RandomFloat(0.f, width), RandomFloat(windowX - 100.f, windowX - 10.f));
+    pos = vec3(RandomFloat(windowX, windowX + width), RandomFloat(windowY - 100.f, windowY - 10.f));
     velocity = vec3(0.f, 0.f);
     accelaretion = vec3();
     radius = GetRandomSize(minSize, maxSize);
@@ -115,9 +115,9 @@ void Snowflake::Update(std::vector<Snowflake>& snow, vec3 mouse, vec3 windowPos)
 
     for (Snowflake& flake : snow)
     {
-        float xOff = flake.pos.x / flake.width;
-        float yOff = flake.pos.y / flake.height;
-        float wx = Map(mouse.x, 0, flake.width, -0.002f, 0.002f, true);
+        float xOff = flake.pos.x / (flake.windowX + flake.width);
+        float yOff = flake.pos.y / (flake.windowY + flake.height);
+        float wx = Map(mouse.x - flake.windowX, 0, flake.width, -0.002f, 0.002f, true);
         vec3 wind = vec3(wx + (xOff * .002f), (yOff * .002f));
         wind *= .5f;
 
@@ -125,5 +125,16 @@ void Snowflake::Update(std::vector<Snowflake>& snow, vec3 mouse, vec3 windowPos)
         flake.ApplyForce(wind);
         flake.Update();
         flake.Render();
+    }
+}
+
+void Snowflake::ChangeWindowPos(std::vector<Snowflake>& snow, int _windowX, int _windowY)
+{
+    for (Snowflake& flake : snow)
+    {
+        flake.pos.x += _windowX - flake.windowX;
+        flake.pos.y += _windowY - flake.windowY;
+        flake.windowX = _windowX;
+        flake.windowY = _windowY;
     }
 }

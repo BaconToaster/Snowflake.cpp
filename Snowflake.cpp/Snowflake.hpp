@@ -106,12 +106,12 @@ namespace Snowflake
         ImU32 color;
         float minSize;
         float maxSize;
-        int windowX;
-        int windowY;
 
     public:
         int width;
         int height;
+        int windowX;
+        int windowY;
         vec3 pos;
 
         Snowflake(float _minSize, float _maxSize, int _windowX, int _windowY, int _width, int _height, ImU32 _color);
@@ -125,4 +125,5 @@ namespace Snowflake
 
     void CreateSnowFlakes(std::vector<Snowflake>& snow, uint64_t limit, float _minSize, float _maxSize, int _windowX, int _windowY, int _width, int _height, vec3 _gravity, ImU32 _color);
     void Update(std::vector<Snowflake>& snow, vec3 mousePos, vec3 windowPos);
+    void ChangeWindowPos(std::vector<Snowflake>& snow, int _windowX, int _windowY);
 }
